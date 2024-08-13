@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img class="logo" src="/imagenes/logo.png" alt="logo de Alura"> 
+    </header>
+    <main>
+        <form class="text">
+            <textarea class="text__area" id="mensaje" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea> 
+            <p id="resultado"></p>
+            <div class="condicion">
+                <span class="text__condicion">Solo palabras en minúsculas y sin acentos</span>
+            <input class="boton-encriptar" onclick="botonEncriptar()" type="submit" value="ENCRIPTAR">
+            <input class="boton-desencriptar" type="submit" value="DESENCRIPTAR">
+            </div>
+        </form>
+    
+        <aside class="mensaje">
+            <img class="abeja" src="/Imagenes/abeja.png" alt="abeja en flor">
+            <div class="mensaje__contenido">
+            <h3 class="mensaje__titulo">Ningun mensaje fue encontrado</h3>
+            <p class="mensaje__text">Ingresa el texto que deseas encriptar o desencriptar</p>
+            </div> 
+            <div>
+                <button class="boton-copiar hidden">COPIAR</button>
+            </div>
+        </aside>
+    </main>
+    <script src="./scrip.js"></script>
+    <footer class="footer">
+        <p>Creado por Sandra V. ¡Shalom!</p>
+    </footer>
+       
+</body>
+</html>
