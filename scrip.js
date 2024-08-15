@@ -14,8 +14,6 @@ const matrizCodigo = [
     ["u", "ufat"]
 ];
 
-const regex = /^[^áéíóúñü^]*$/;
-
 function encriptarmensaje(mensaje){
     let mensajeEncriptado = "";
     for(let i = 0; i < mensaje.length; i++){
@@ -29,8 +27,7 @@ function encriptarmensaje(mensaje){
         }
         mensajeEncriptado += encriptada;
     }
-    return mensajeEncriptado;
-    
+    return mensajeEncriptado;    
 }
 
 function desencriptarMensaje(mensaje){
@@ -45,6 +42,11 @@ function desencriptarMensaje(mensaje){
 textArea.addEventListener("input", (e)=>{
 mensajeTitulo.textContent = "";
 mensajeText.textContent = "";
+const allowedChars = /^[a-z0-9\s]*$/;
+const textArea = e.target;
+if (!allowedChars.test(textArea.value)) {
+    textArea.value = textArea.value.slice(0, -1);
+}
 })
 
 botonEncriptar.addEventListener("click", (e)=>{
