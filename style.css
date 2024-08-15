@@ -168,4 +168,7 @@ main{
         max-width: 624px;
         margin-top: 20px;
     }
+    .footer{
+        text-aling: center;
+    }
 }
